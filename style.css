@@ -1,0 +1,35 @@
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    text-align: center;
+}
+
+a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+body > *:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+#app canvas {
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'PixelSplitter';
+    src: url('./assets/PixelSplitter-Bold.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
