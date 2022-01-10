@@ -1,4 +1,5 @@
 const resourcesUrls = [
+  ['bg', 'bg.mp4'],
   ...Array.from({ length: 19 }).map((v, i) => ['bat_' + i, 'bat_' + i + '.png']),
   ...Array.from({ length: 2 }).map((v, i) => ['obstacle_top_' + i, 'obstacle_top_' + i + '.png']),
   ...Array.from({ length: 2 }).map((v, i) => ['obstacle_bottom_' + i, 'obstacle_bottom_' + i + '.png']),
@@ -95,9 +96,9 @@ class App {
       this.loader.add(res[0], './assets/' + res[1])
     }
     this.loader.load(() => {
-      this.loader.resources.click.data.volume = 0.5
-      this.loader.resources.wing.data.volume = 0.3
-      this.loader.resources.hit.data.volume = 0.3
+      this.loader.resources.click.data.volume = 0.25
+      this.loader.resources.wing.data.volume = 0.25
+      this.loader.resources.hit.data.volume = 0.25
       
       text.text = 'click here to continue'
       text.interactive = text.buttonMode = true
@@ -117,12 +118,9 @@ class App {
     this.bg.scale.set(1.2)
     this.bg.position = this.screenCenter
     this.app.stage.addChild(this.bg)
-
-    this.bg.texture.baseTexture.resource.source.loop = true
   }
 
   setupNewGameScene() {
-    this.currentBat = 0
     const center = this.screenCenter
 
     this.bg.filters = [new PIXI.filters.BlurFilter(8)]

@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <image src="assets/logo.png"></image>
+    <image id="main_logo" src="assets/logo.png"></image>
     <div id="app"></div>
     <div>
         <p>Click/tap anywhere within game area to accelerate upwards</p>
         <p>This is an unofficial fan project that is not affilated with <a href="https://www.cryptobatz.com/">CryproBatz</a> project</p>
+        <p class="social_links">
+            <a href="https://twitter.com/VladimirMenkin">
+                <img src="./assets/twitter_logo_white.svg" alt="My Twitter">
+            </a>
+            <a href="https://github.com/v0vanch">
+                <img src="./assets/github_logo_white.png" alt="My GitHub">
+            </a>
+        </p>
     </div>
-    <video id="bgVid" preload="auto" hidden>
+    <video id="bgVid" preload="auto" autoplay loop hidden>
         <source src="./assets/bg.mp4" type="video/mp4">
     </video>
     <script defer src="./fontfaceobserver.standalone.js"></script>
     <script defer src="./pixi.min.js"></script>
-    <script defer src="./ui.js"></script>
-    <script defer src="./util.js"></script>
-    <script defer src="./main.js"></script>
+    <script defer src="./main.js?2"></script>
 </body>
 </html>
