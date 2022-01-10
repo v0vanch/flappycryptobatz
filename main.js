@@ -158,6 +158,7 @@ class App {
     const changeChar = (val) => {
       this.currentBat += val
       this.currentBat %= 19
+      if (this.currentBat < 0) this.currentBat = 18
       bat.texture = this.loader.resources['bat_' + this.currentBat].texture
     }
 
